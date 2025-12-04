@@ -1,0 +1,9 @@
+{
+  "name": "ppuroject",
+  "private": true,
+  "packageManager": "pnpm@8.15.7",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
