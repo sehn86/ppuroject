@@ -3,6 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@pp/types": "workspace:*"
+    "@pp/types": "workspace:*",
+    "@prisma/client": "^5.16.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.16.2"
+  },
+  "scripts": {
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:deploy": "npx prisma migrate deploy",
+    "prisma:seed": "npx prisma db seed"
   }
 }

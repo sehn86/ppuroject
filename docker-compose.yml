@@ -17,7 +17,7 @@ services:
 
   api:
     build:
-      context: ./api
+      context: ./apps/api
       dockerfile: Dockerfile
     environment:
       NODE_ENV: production
@@ -27,7 +27,7 @@ services:
         condition: service_healthy
     ports:
       - "3001:3000"
-    entrypoint: ["sh", "-c", "npx prisma migrate deploy && npx prisma db seed && node dist/main"]
+    entrypoint: ["sh", "-c", "pnpm run prisma:deploy && pnpm run prisma:seed && node dist/main"]
 
   web:
     build:
